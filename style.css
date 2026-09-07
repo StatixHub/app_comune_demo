@@ -426,20 +426,19 @@ body {
 .service-icon {
     width: 48px;
     height: 48px;
-
     flex-shrink: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 14px;
-
     background: #eaf0f8;
-    color: var(--blu);
-
+    color: #003882 !important;
     font-size: 22px;
     font-weight: 600;
+    opacity: 1 !important;
+    visibility: visible !important;
+    overflow: visible !important;
+
 }
 
 
