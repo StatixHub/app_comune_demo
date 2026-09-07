@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Comune di Lecco</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+<header class="app-header">
+
+    <div class="header-top">
+
+
+        <div class="header-title">
+            <img src="img/citta_di_lecco_logo.webp" alt="Città di Lecco">
+            <div class="city-name">CITTÀ DI LECCO</div>
+        </div>
+
+        <div class="header-spacer"></div>
+
+    </div>
+
+</header>
+
+
+<!-- ==========================================
+     HOME
+=========================================== -->
+
+<main>
+
+    <!-- BENVENUTO -->
+    <section class="welcome">
+        <h1>Cosa ti serve?</h1>
+    </section>
+
+
+    <!-- ACCESSI RAPIDI -->
+    <section class="quick-section">
+
+        <div class="quick-grid">
+
+            <!-- SERVIZI -->
+            <a href="#" class="quick-card"
+               onclick="showScreen('servizi'); return false;">
+
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M3 21h18"/>
+                        <path d="M5 21V8l7-5 7 5v13"/>
+                        <path d="M9 21v-5h6v5"/>
+                        <path d="M9 10h.01"/>
+                        <path d="M12 10h.01"/>
+                        <path d="M15 10h.01"/>
+
+                    </svg>
+                </div>
+
+                <strong>Servizi</strong>
+                <small>Accedi ai servizi comunali</small>
+
+            </a>
+
+
+            <!-- VIABILITÀ -->
+            <a href="#" class="quick-card"
+               onclick="showScreen('viabilita'); return false;">
+
+                <div class="icon-circle">
+
+                    <svg viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M5 17l1.5-6h11L19 17"/>
+                        <path d="M7 17h10"/>
+                        <path d="M8 11l1-3h6l1 3"/>
+                        <circle cx="8" cy="17" r="1.5"/>
+                        <circle cx="16" cy="17" r="1.5"/>
+
+                    </svg>
+
+                </div>
+
+                <strong>Viabilità</strong>
+                <small>Strade, lavori e modifiche</small>
+
+            </a>
+
+
+            <!-- AVVISI -->
+            <a href="#" class="quick-card" onclick="showScreen('avvisi'); return false;">
+
+
+                <div class="icon-circle">
+
+                    <svg viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M3 11v2l12 4V7L3 11z"/>
+                        <path d="M15 10c2 0 4 1 5 3"/>
+                        <path d="M15 14c2 0 4-1 5-3"/>
+                        <path d="M7 15l1.5 5h2L9 16"/>
+
+                    </svg>
+
+                </div>
+
+                <strong>Avvisi</strong>
+                <small>Informazioni dal Comune</small>
+
+            </a>
+
+
+            <!-- SEGNALAZIONI -->
+            <a href="https://urbanclick.lc-card.it/index.php?c=n200574" class="quick-card urban-card">
+
+                <div class="urban-logo">
+                    <img src="img/logo_urban_click.png"
+                         alt="Urban Click">
+                </div>
+
+                <strong>Segnalazioni</strong>
+                <small>Segnala un problema</small>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         AVVISI IMPORTANTI
+    =========================================== -->
+
+    <section class="content-section">
+
+        <div class="section-heading">
+
+            <h2>Avvisi importanti</h2>
+
+            <a href="#"
+               onclick="showScreen('avvisi-importanti'); return false;">
+                Vedi tutti
+            </a>
+
+        </div>
+
+        <div id="urgenti">
+
+            <div class="empty-message">
+                Nessun avviso urgente
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+ <!-- ==========================================
+     NEWS
+=========================================== -->
+
+<section class="content-section">
+
+    <div class="section-heading">
+
+        <h2>News</h2>
+
+    </div>
+
+    <a
+        href="http://www.comune.lecco.it/openpa/object/108"
+        class="service-item"
+        target="_blank"
+        rel="noopener"
+    >
+
+        <div class="service-icon">▣</div>
+
+        <div>
+            <strong>News del Comune</strong>
+            <span>Leggi tutte le ultime notizie</span>
+        </div>
+
+    </a>
+
+</section>
+
+
+ <!-- ==========================================
+     EVENTI
+=========================================== -->
+
+<section class="content-section">
+
+    <div class="section-heading">
+
+        <h2>Eventi</h2>
+
+    </div>
+
+    <a
+        href="http://www.comune.lecco.it/openpa/object/126"
+        class="service-item"
+        target="_blank"
+        rel="noopener"
+    >
+
+        <div class="service-icon">▣</div>
+
+        <div>
+            <strong>Eventi a Lecco</strong>
+            <span>Scopri tutti gli eventi della città</span>
+        </div>
+
+    </a>
+
+</section>
+
+</main>
+
+
+<!-- ==========================================
+     SCHERMATA SERVIZI
+=========================================== -->
+
+<section id="screen-servizi" class="app-screen">
+
+    <div class="screen-header">
+
+        <button class="back-button"
+                onclick="showScreen('home')">
+
+            ←
+
+        </button>
+
+        <div>
+
+            <span>SEZIONE</span>
+            <h1>Servizi</h1>
+
+        </div>
+
+    </div>
+
+
+    <div class="screen-intro">
+
+        <p>
+            Accedi rapidamente ai servizi digitali
+            della Città di Lecco.
+        </p>
+
+    </div>
+
+
+    <div class="services-list">
+
+        <!-- SERVIZI ONLINE -->
+        <a href="#"
+           class="service-item"
+           onclick="showScreen('servizi-online'); return false;">
+
+            <div class="service-icon">↗</div>
+
+            <div>
+                <strong>Servizi online</strong>
+                <span>Pratiche e servizi digitali</span>
+            </div>
+
+        </a>
+
+
+        <!-- PAGAMENTI -->
+        <a href="#"
+           class="service-item">
+
+            <div class="service-icon">€</div>
+
+            <div>
+                <strong>Pagamenti PagoPA</strong>
+                <span>Pagamenti online verso il Comune</span>
+            </div>
+
+        </a>
+
+
+        <!-- ALTRI SERVIZI -->
+        <a href="#"
+           class="service-item"
+           onclick="showScreen('altri-servizi'); return false;">
+
+            <div class="service-icon">◉</div>
+
+            <div>
+                <strong>Altri servizi</strong>
+                <span>Informazioni, canali e servizi del Comune</span>
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     SCHERMATA SERVIZI ONLINE
+=========================================== -->
+
+<section id="screen-servizi-online" class="app-screen">
+
+    <div class="screen-header">
+
+        <button class="back-button"
+                onclick="showScreen('servizi')">
+
+            ←
+
+        </button>
+
+        <div>
+
+            <span>SERVIZI</span>
+            <h1>Servizi online</h1>
+
+        </div>
+
+    </div>
+
+
+    <div class="screen-intro">
+
+        <p>
+            Accedi alle pratiche e ai servizi digitali
+            organizzati per area.
+        </p>
+
+    </div>
+
+
+    <div class="services-list">
+
+
+        <!-- SERVIZI SOCIALI -->
+        <a href="#"
+           class="service-item"
+           onclick="showScreen('servizi-sociali'); return false;">
+
+            <div class="service-icon">♥</div>
+
+            <div>
+                <strong>Servizi sociali</strong>
+                <span>Istanze e servizi per cittadini e famiglie</span>
+            </div>
+
+        </a>
+
+
+        <!-- ISTRUZIONE -->
+        <a href="#"
+           class="service-item"
+           onclick="showScreen('istruzione'); return false;">
+
+            <div class="service-icon">▣</div>
+
+            <div>
+                <strong>Istruzione</strong>
+                <span>Istanze e servizi scolastici</span>
+            </div>
+
+        </a>
+
+
+        <!-- ANAGRAFE -->
+        <a href="#"
+           class="service-item"
+           onclick="showScreen('anagrafe'); return false;">
+
+            <div class="service-icon">♙</div>
+
+            <div>
+                <strong>Anagrafe e stato civile</strong>
+                <span>Istanze e certificati</span>
+            </div>
+
+        </a>
+
+
+        <!-- MOBILITÀ -->
+        <a href="#"
+           class="service-item"
+           onclick="showScreen('mobilita-servizi'); return false;">
+
+            <div class="service-icon">🚗</div>
+
+            <div>
+                <strong>Mobilità</strong>
+                <span>ZTL, multe e autorizzazioni</span>
+            </div>
+
+        </a>
+
+
+        <!-- TRIBUTI -->
+        <a href="#"
+           class="service-item"
+           onclick="showScreen('tributi'); return false;">
+
+            <div class="service-icon">€</div>
+
+            <div>
+                <strong>Tributi</strong>
+                <span>Servizi e posizione tributaria</span>
+            </div>
+
+        </a>
+
+
+        <!-- EDILIZIA E TERRITORIO -->
+        <a href="#"
+           class="service-item"
+           onclick="showScreen('edilizia-territorio'); return false;">
+
+            <div class="service-icon">⌂</div>
+
+            <div>
+                <strong>Edilizia e territorio</strong>
+                <span>Pratiche edilizie, SUAP e Geoportale</span>
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     SERVIZI SOCIALI
+=========================================== -->
+
+<section id="screen-servizi-sociali" class="app-screen">
+
+    <div class="screen-header">
+
+        <button class="back-button"
+                onclick="showScreen('servizi-online')">
+
+            ←
+
+        </button>
+
+        <div>
+
+            <span>SERVIZI ONLINE</span>
+            <h1>Servizi sociali</h1>
+
+        </div>
+
+    </div>
+
+
+    <div class="screen-intro">
+
+        <p>
+            Istanze e servizi online per cittadini e famiglie.
+        </p>
+
+    </div>
+
+
+    <div class="services-list">
+
+        <a href="#"
+           class="service-item">
+
+            <div class="service-icon">↗</div>
+
+            <div>
+                <strong>Istanze online</strong>
+                <span>Accedi alle istanze dei servizi sociali</span>
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     ISTRUZIONE
+=========================================== -->
+
+<section id="screen-istruzione" class="app-screen">
+
+    <div class="screen-header">
+
+        <button class="back-button"
+                onclick="showScreen('servizi-online')">
+
+            ←
+
+        </button>
+
+        <div>
+
+            <span>SERVIZI ONLINE</span>
+            <h1>Istruzione</h1>
+
+        </div>
+
+    </div>
+
+
+    <div class="screen-intro">
+
+        <p>
+            Servizi online dedicati all'istruzione.
+        </p>
+
+    </div>
+
+
+    <div class="services-list">
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">↗</div>
+
+            <div>
+                <strong>Istanze online</strong>
+                <span>Presenta una richiesta online</span>
+            </div>
+
+        </a>
+
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">▣</div>
+
+            <div>
+                <strong>Mensa</strong>
+                <span>Servizi e gestione della mensa scolastica</span>
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     ANAGRAFE E STATO CIVILE
+=========================================== -->
+
+<section id="screen-anagrafe" class="app-screen">
+
+    <div class="screen-header">
+
+        <button class="back-button"
+                onclick="showScreen('servizi-online')">
+
+            ←
+
+        </button>
+
+        <div>
+
+            <span>SERVIZI ONLINE</span>
+            <h1>Anagrafe e stato civile</h1>
+
+        </div>
+
+    </div>
+
+
+    <div class="screen-intro">
+
+        <p>
+            Servizi demografici, istanze e certificati.
+        </p>
+
+    </div>
+
+
+    <div class="services-list">
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">↗</div>
+
+            <div>
+                <strong>Istanze online</strong>
+                <span>Accedi ai servizi demografici online</span>
+            </div>
+
+        </a>
+
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">▣</div>
+
+            <div>
+                <strong>Certificati</strong>
+                <span>Richiedi e scarica i certificati</span>
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     MOBILITÀ
+=========================================== -->
+
+<section id="screen-mobilita-servizi" class="app-screen">
+
+    <div class="screen-header">
+
+        <button class="back-button"
+                onclick="showScreen('servizi-online')">
+
+            ←
+
+        </button>
+
+        <div>
+
+            <span>SERVIZI ONLINE</span>
+            <h1>Mobilità</h1>
+
+        </div>
+
+    </div>
+
+
+    <div class="screen-intro">
+
+        <p>
+            Servizi online dedicati alla mobilità.
+        </p>
+
+    </div>
+
+
+    <div class="services-list">
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">🚗</div>
+
+            <div>
+                <strong>Servizi ZTL</strong>
+                <span>Permessi e servizi per le zone a traffico limitato</span>
+            </div>
+
+        </a>
+
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">€</div>
+
+            <div>
+                <strong>Concilia – Multe</strong>
+                <span>Consulta e gestisci le sanzioni</span>
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     TRIBUTI
+=========================================== -->
+
+<section id="screen-tributi" class="app-screen">
+
+    <div class="screen-header">
+
+        <button class="back-button"
+                onclick="showScreen('servizi-online')">
+
+            ←
+
+        </button>
+
+        <div>
+
+            <span>SERVIZI ONLINE</span>
+            <h1>Tributi</h1>
+
+        </div>
+
+    </div>
+
+
+    <div class="screen-intro">
+
+        <p>
+            Servizi online per la gestione dei tributi comunali.
+        </p>
+
+    </div>
+
+
+    <div class="services-list">
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">€</div>
+
+            <div>
+                <strong>Linkmate</strong>
+                <span>Consulta la tua posizione tributaria</span>
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     EDILIZIA E TERRITORIO
+=========================================== -->
+
+<section id="screen-edilizia-territorio" class="app-screen">
+
+    <div class="screen-header">
+
+        <button class="back-button"
+                onclick="showScreen('servizi-online')">
+
+            ←
+
+        </button>
+
+        <div>
+
+            <span>SERVIZI ONLINE</span>
+            <h1>Edilizia e territorio</h1>
+
+        </div>
+
+    </div>
+
+
+    <div class="screen-intro">
+
+        <p>
+            Pratiche edilizie, attività produttive
+            e informazioni sul territorio.
+        </p>
+
+    </div>
+
+
+    <div class="services-list">
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">⌂</div>
+
+            <div>
+                <strong>SUE – Istanze</strong>
+                <span>Presenta e consulta le pratiche edilizie</span>
+            </div>
+
+        </a>
+
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">▣</div>
+
+            <div>
+                <strong>SUAP – Istanze produttive</strong>
+                <span>Servizi per le attività produttive</span>
+            </div>
+
+        </a>
+
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">▣</div>
+
+            <div>
+                <strong>SUAP – Istanze non produttive</strong>
+                <span>Servizi e pratiche non produttive</span>
+            </div>
+
+        </a>
+
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">⌖</div>
+
+            <div>
+                <strong>Geoportale</strong>
+                <span>Consulta le informazioni geografiche del territorio</span>
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     ALTRI SERVIZI
+=========================================== -->
+
+<section id="screen-altri-servizi" class="app-screen">
+
+    <div class="screen-header">
+
+        <button class="back-button"
+                onclick="showScreen('servizi')">
+
+            ←
+
+        </button>
+
+        <div>
+
+            <span>SERVIZI</span>
+            <h1>Altri servizi</h1>
+
+        </div>
+
+    </div>
+
+
+    <div class="screen-intro">
+
+        <p>
+            Canali informativi e altri servizi della Città di Lecco.
+        </p>
+
+    </div>
+
+
+    <div class="services-list">
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">✈</div>
+
+            <div>
+                <strong>Telegram</strong>
+                <span>Segui gli aggiornamenti del Comune</span>
+            </div>
+
+        </a>
+
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">f</div>
+
+            <div>
+                <strong>Facebook</strong>
+                <span>La Città di Lecco sui social</span>
+            </div>
+
+        </a>
+
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">◎</div>
+
+            <div>
+                <strong>Instagram</strong>
+                <span>Segui il Comune su Instagram</span>
+            </div>
+
+        </a>
+
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">▣</div>
+
+            <div>
+                <strong>Albo online</strong>
+                <span>Consulta gli atti pubblicati dal Comune</span>
+            </div>
+
+        </a>
+
+
+        <a href="#" class="service-item">
+
+            <div class="service-icon">i</div>
+
+            <div>
+                <strong>Amministrazione trasparente</strong>
+                <span>Informazioni e documenti del Comune</span>
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     SCHERMATA AVVISI IMPORTANTI
+=========================================== -->
+
+<section id="screen-avvisi-importanti" class="app-screen">
+
+    <div class="screen-header">
+
+        <button class="back-button"
+                onclick="showScreen('home')"
+                aria-label="Torna alla Home">
+
+            ←
+
+        </button>
+
+        <div>
+
+            <span>INFORMAZIONI</span>
+            <h1>Avvisi importanti</h1>
+
+        </div>
+
+    </div>
+
+
+    <div class="screen-intro">
+
+        <p>
+            Tutti gli avvisi importanti attualmente attivi.
+        </p>
+
+    </div>
+
+
+    <div id="lista-avvisi-importanti">
+
+        <div class="empty-message">
+            Nessun avviso importante
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     SCHERMATA AVVISI
+=========================================== -->
+
+<section id="screen-avvisi" class="app-screen">
+
+    <div class="screen-header">
+
+        <button class="back-button"
+                onclick="showScreen('home')"
+                aria-label="Torna alla Home">
+
+            ←
+
+        </button>
+
+        <div>
+
+            <span>INFORMAZIONI</span>
+            <h1>Avvisi</h1>
+
+        </div>
+
+    </div>
+
+
+    <div class="screen-intro">
+
+        <p>
+            Tutti gli avvisi attualmente attivi
+            della Città di Lecco.
+        </p>
+
+    </div>
+
+
+    <div id="lista-avvisi">
+
+        <div class="empty-message">
+            Nessun avviso
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     SCHERMATA VIABILITÀ
+=========================================== -->
+
+<!-- SCHERMATA VIABILITÀ -->
+<section id="screen-viabilita" class="app-screen">
+
+    <div class="screen-header">
+
+        <button class="back-button" onclick="showScreen('home')">
+            ←
+        </button>
+
+        <div>
+            <span>SEZIONE</span>
+            <h1>Viabilità</h1>
+        </div>
+
+    </div>
+
+
+    <div class="screen-intro">
+        <p>
+            Informazioni su strade, lavori, modifiche
+            alla circolazione e trasporti.
+        </p>
+    </div>
+
+
+    <!-- CONTENUTI DINAMICI DAL GOOGLE SHEET -->
+
+    <div id="lista-viabilita">
+
+        <div class="empty-message">
+            Nessuna informazione sulla viabilità
+        </div>
+
+    </div>
+
+
+    <!-- LAVORI E CANTIERI -->
+
+    <div class="services-list">
+
+		<a href="#"
+		   class="service-item"
+		   onclick="showScreen('cantieri'); return false;">
+
+            <div class="service-icon">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.8"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+
+                    <path d="M3 20h18"/>
+                    <path d="M6 20v-6l6-10 6 10v6"/>
+                    <path d="M9 20v-4h6v4"/>
+                    <path d="M8 11h8"/>
+
+                </svg>
+
+            </div>
+
+            <div>
+                <strong>Lavori e cantieri</strong>
+                <span>Strade interessate da lavori</span>
+            </div>
+
+        </a>
+
+
+        <!-- MODIFICHE ALLA CIRCOLAZIONE -->
+
+        <a href="#" class="service-item" onclick="showScreen('modifiche-circolazione'); return false;">
+
+            <div class="service-icon">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.8"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+
+                    <path d="M12 3v18"/>
+                    <path d="M8 7l4-4 4 4"/>
+                    <path d="M8 17l4 4 4-4"/>
+
+                </svg>
+
+            </div>
+
+            <div>
+                <strong>Modifiche alla circolazione</strong>
+                <span>Chiusure, deviazioni e sensi unici</span>
+            </div>
+
+        </a>
+
+
+        <!-- PARCHEGGI -->
+
+        <a href="https://lineelecco.it/parcheggi/"
+           class="service-item"
+           target="_blank"
+           rel="noopener">
+
+            <div class="service-icon">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.8"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+
+                    <rect x="4" y="3" width="16" height="18" rx="2"/>
+                    <path d="M9 17V7h4a3 3 0 0 1 0 6H9"/>
+
+                </svg>
+
+            </div>
+
+            <div>
+                <strong>Parcheggi</strong>
+                <span>Informazioni e servizi per la sosta</span>
+            </div>
+
+        </a>
+
+
+        <!-- AUTOBUS URBANI -->
+
+        <a href="https://www.leccotrasporti.it/"
+           class="service-item"
+           target="_blank"
+           rel="noopener">
+
+            <div class="service-icon">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.8"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+
+                    <rect x="5" y="3" width="14" height="15" rx="3"/>
+                    <path d="M8 18l-2 3"/>
+                    <path d="M16 18l2 3"/>
+                    <path d="M5 11h14"/>
+                    <circle cx="8.5" cy="15" r="1"/>
+                    <circle cx="15.5" cy="15" r="1"/>
+
+                </svg>
+
+            </div>
+
+            <div>
+                <strong>Autobus urbani</strong>
+                <span>Linee, orari e fermate in città</span>
+            </div>
+
+        </a>
+
+
+        <!-- AUTOBUS EXTRAURBANI -->
+
+        <a href="https://www.leccotrasporti.it/"
+           class="service-item"
+           target="_blank"
+           rel="noopener">
+
+            <div class="service-icon">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.8"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+
+                    <rect x="4" y="4" width="16" height="14" rx="3"/>
+                    <path d="M7 18l-2 3"/>
+                    <path d="M17 18l2 3"/>
+                    <path d="M4 11h16"/>
+                    <path d="M8 7h8"/>
+                    <circle cx="8" cy="15" r="1"/>
+                    <circle cx="16" cy="15" r="1"/>
+
+                </svg>
+
+            </div>
+
+            <div>
+                <strong>Autobus extraurbani</strong>
+                <span>Collegamenti con Lecco e il territorio</span>
+            </div>
+
+        </a>
+
+
+        <!-- TRENI -->
+
+        <a href="https://www.trenord.it/"
+           class="service-item"
+           target="_blank"
+           rel="noopener">
+
+            <div class="service-icon">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.8"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+
+                    <rect x="5" y="3" width="14" height="15" rx="3"/>
+                    <path d="M8 18l-2 3"/>
+                    <path d="M16 18l2 3"/>
+                    <path d="M5 11h14"/>
+                    <circle cx="8.5" cy="15" r="1"/>
+                    <circle cx="15.5" cy="15" r="1"/>
+
+                </svg>
+
+            </div>
+
+            <div>
+                <strong>Treni</strong>
+                <span>Orari, collegamenti e informazioni ferroviarie</span>
+            </div>
+
+        </a>
+
+
+        <!-- NAVIGAZIONE SUL LAGO -->
+
+        <a href="https://www.navigazionelaghi.it/"
+           class="service-item"
+           target="_blank"
+           rel="noopener">
+
+            <div class="service-icon">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.8"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+
+                    <path d="M3 16l9-11 9 11"/>
+                    <path d="M6 16h12"/>
+                    <path d="M4 19c2 1.5 4 1.5 6 0 2 1.5 4 1.5 6 0 1.3-.9 2.7-.9 4 0"/>
+
+                </svg>
+
+            </div>
+
+            <div>
+                <strong>Navigazione sul lago</strong>
+                <span>Collegamenti, orari e informazioni sui battelli</span>
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     SCHERMATA MODIFICHE ALLA CIRCOLAZIONE
+=========================================== -->
+
+<section id="screen-modifiche-circolazione" class="app-screen">
+
+    <div class="screen-header">
+
+        <button class="back-button"
+                onclick="showScreen('viabilita')"
+                aria-label="Torna alla Viabilità">
+
+            ←
+
+        </button>
+
+        <div>
+
+            <span>VIABILITÀ</span>
+            <h1>Modifiche alla circolazione</h1>
+
+        </div>
+
+    </div>
+
+
+    <div class="screen-intro">
+
+        <p>
+            Chiusure, deviazioni e modifiche alla circolazione
+            nel territorio comunale.
+        </p>
+
+    </div>
+
+
+    <div id="lista-modifiche-circolazione">
+
+        <div class="empty-message">
+            Nessuna modifica alla circolazione
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     SCHERMATA LAVORI E CANTIERI
+=========================================== -->
+
+<section id="screen-cantieri" class="app-screen">
+
+    <div class="screen-header">
+
+        <button class="back-button"
+                onclick="showScreen('viabilita')"
+                aria-label="Torna alla Viabilità">
+
+            ←
+
+        </button>
+
+        <div>
+
+            <span>VIABILITÀ</span>
+            <h1>Lavori e cantieri</h1>
+
+        </div>
+
+    </div>
+
+
+    <div class="screen-intro">
+
+        <p>
+            Strade interessate da lavori e cantieri
+            nel territorio comunale.
+        </p>
+
+    </div>
+
+
+    <div id="lista-cantieri">
+
+        <div class="empty-message">
+            Nessun lavoro o cantiere
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     FOOTER
+=========================================== -->
+
+<footer class="app-footer">
+
+    <div class="footer-contact">
+        <strong>Comune di Lecco</strong>
+        <span>Piazza Armando Diaz 1 · 23900 Lecco (LC)</span>
+        <span>PEC: comune@pec.comunedilecco.it</span>
+    </div>
+
+    <div class="footer-copy">
+        © 2026 Chiara · Progetto demo non ufficiale
+    </div>
+
+</footer>
+
+
+<script src="app.js"></script>
+
+
+</body>
+</html>
+

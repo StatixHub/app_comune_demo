@@ -1,0 +1,539 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blu: #003882;
+    --blu-scuro: #003274;
+    --sfondo: #f4f6f9;
+    --bianco: #ffffff;
+    --testo: #222222;
+    --testo-secondario: #6b7280;
+    --bordo: #e5e7eb;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--sfondo);
+    color: var(--testo);
+    padding-bottom: 82px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.app-header {
+    background: var(--blu);
+    color: white;
+    padding: 16px 18px 18px;
+}
+
+.header-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.header-title {
+    text-align: center;
+    justify-self: center;
+}
+
+.header-title img {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto 4px;
+}
+
+.city-name {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.header-spacer {
+    width: 42px;
+    height: 42px;
+}
+
+.menu-button,
+.notification-button {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.header-title {
+    text-align: center;
+    line-height: 1.05;
+}
+
+.header-title img {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+.header-title span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.header-title strong {
+    display: block;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   BENVENUTO
+========================= */
+
+.welcome {
+    background: var(--blu);
+    color: white;
+
+    padding: 4px 22px 28px;
+
+    border-radius: 0 0 28px 28px;
+}
+
+.welcome p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 4px;
+}
+
+.welcome h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   ACCESSI RAPIDI
+========================= */
+
+.quick-section {
+    padding: 20px 16px 4px;
+}
+
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.quick-card {
+    min-height: 150px;
+
+    background: var(--bianco);
+    border-radius: 20px;
+
+    padding: 18px 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    text-decoration: none;
+    color: var(--testo);
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+
+    transition: transform 0.15s ease;
+}
+
+.quick-card:active {
+    transform: scale(0.97);
+}
+
+.icon-circle {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 15px;
+
+    background: #eaf0f8;
+    color: var(--blu);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.quick-card strong {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.quick-card small {
+    font-size: 12px;
+    line-height: 1.35;
+    color: var(--testo-secondario);
+}
+
+
+/* =========================
+   URBAN CLICK
+========================= */
+
+.urban-card {
+    position: relative;
+}
+
+.urban-logo {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.urban-logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   SEZIONI
+========================= */
+
+.content-section {
+    padding: 24px 16px 0;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-size: 19px;
+}
+
+.section-heading a {
+    font-size: 13px;
+    color: var(--blu);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* =========================
+   CONTENUTI VUOTI
+========================= */
+
+.empty-message {
+    background: white;
+    border-radius: 16px;
+
+    padding: 18px;
+
+    color: var(--testo-secondario);
+    font-size: 14px;
+
+    border: 1px solid var(--bordo);
+}
+
+
+/* =========================
+   NAVIGAZIONE INFERIORE
+========================= */
+
+.bottom-nav {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 72px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-top: 1px solid var(--bordo);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    z-index: 100;
+
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.nav-item {
+    height: 100%;
+
+    min-width: 65px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    text-decoration: none;
+    color: #777;
+
+    font-size: 11px;
+}
+
+.nav-icon {
+    font-size: 23px;
+    line-height: 1;
+}
+
+.nav-item.active {
+    color: var(--blu);
+    font-weight: 700;
+}
+
+
+/* =========================
+   TABLET / DESKTOP
+========================= */
+
+@media (min-width: 700px) {
+
+    body {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .bottom-nav {
+        max-width: 700px;
+        left: 50%;
+        right: auto;
+        width: 700px;
+        transform: translateX(-50%);
+    }
+}
+
+/* =========================
+   SCHERMATE INTERNE
+========================= */
+
+.app-screen {
+    display: none;
+    padding: 20px 16px 30px;
+}
+
+.screen-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.back-button {
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: white;
+    color: var(--blu);
+
+    font-size: 26px;
+    cursor: pointer;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    
+    display: flex;
+}
+
+.screen-header span {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--testo-secondario);
+}
+
+.screen-header h1 {
+    font-size: 28px;
+    margin-top: 2px;
+}
+
+.screen-intro {
+    margin-bottom: 20px;
+}
+
+.screen-intro p {
+    color: var(--testo-secondario);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: white;
+    border-radius: 18px;
+
+    padding: 16px;
+
+    text-decoration: none;
+    color: var(--testo);
+
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.05);
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #eaf0f8;
+    color: var(--blu);
+
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.service-item strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.service-item span {
+    display: block;
+    font-size: 12px;
+    color: var(--testo-secondario);
+}
+
+/* =========================
+   CARDS AVVISI
+========================= */
+
+.content-card {
+    width: 100%;
+    background: var(--bianco);
+    border: 1px solid var(--bordo);
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.content-card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--testo);
+    line-height: 1.25;
+    margin-bottom: 5px;
+}
+
+.content-zone {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--blu);
+    margin-bottom: 12px;
+}
+
+.content-description {
+    font-size: 14px;
+    color: var(--testo);
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.content-date {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--testo-secondario);
+    padding-top: 11px;
+    border-top: 1px solid var(--bordo);
+}
+
+.content-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--blu);
+    text-decoration: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.app-footer {
+    text-align: center;
+    color: #888;
+    padding: 25px 20px;
+    font-size: 0.85rem;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-contact strong {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.footer-copy {
+    margin-top: 14px;
+    font-size: 0.7rem;
+    color: #aaa;
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Comune di Lecco",
+  "short_name": "Comune Lecco",
+  "description": "Servizi e informazioni del Comune di Lecco",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "lang": "it"
+}
