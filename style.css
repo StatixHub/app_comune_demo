@@ -441,6 +441,12 @@ body {
 
 }
 
+.service-icon svg {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+
 
 .service-item strong {
     display: block;
