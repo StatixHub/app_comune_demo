@@ -445,7 +445,7 @@ body {
 .service-icon svg {
     width: 28px;
     height: 28px;
-    display: block;
+    stroke: var(--blu);
 }
 
 .service-item strong {
