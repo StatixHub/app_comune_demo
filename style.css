@@ -423,28 +423,25 @@ body {
     box-shadow: 0 2px 9px rgba(0, 0, 0, 0.05);
 }
 
-<div class="service-icon" style="
-    position: fixed !important;
-    top: 20px !important;
-    left: 20px !important;
-    z-index: 99999 !important;
-    width: 100px !important;
-    height: 60px !important;
-    background: yellow !important;
-    color: red !important;
-    font-size: 30px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-">
-    CIAO
-</div>
+.service-icon {
+    width: 48px;
+    height: 48px;
 
-.service-icon svg {
-    width: 28px;
-    height: 28px;
-    stroke: var(--blu);
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #eaf0f8;
+    color: var(--blu);
+
+    font-size: 22px;
+    font-weight: 600;
 }
+
 
 .service-item strong {
     display: block;
