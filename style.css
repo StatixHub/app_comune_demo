@@ -97,7 +97,7 @@ body {
 
     padding: 4px 22px 28px;
 
-    border-radius: 0 0 28px 28px;
+    border-radius:0;
 }
 
 .welcome p {
