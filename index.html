@@ -8,6 +8,10 @@
 
 <title>Comune di Lecco</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 <link rel="manifest" href="manifest.json">
 
@@ -43,7 +47,7 @@
 
     <!-- BENVENUTO -->
     <section class="welcome">
-        <h1>Cosa ti serve?</h1>
+        <h1>Lecco, a portata di mano</h1>
     </section>
 
 
@@ -137,10 +141,10 @@
             <!-- SEGNALAZIONI -->
             <a href="https://urbanclick.lc-card.it/index.php?c=n200574" class="quick-card urban-card">
 
-                <div class="urban-logo">
-                    <img src="img/logo_urban_click.png"
-                         alt="Urban Click">
-                </div>
+                <div class="icon-circle urban-icon">
+					<img src="img/logo_urban_click.png"
+					alt="Urban Click">
+				</div>
 
                 <strong>Segnalazioni</strong>
                 <small>Segnala un problema</small>
@@ -156,7 +160,7 @@
          AVVISI IMPORTANTI
     =========================================== -->
 
-    <section class="content-section">
+		<section class="content-section important-section">
 
         <div class="section-heading">
 
@@ -419,7 +423,24 @@
            class="service-item"
            onclick="showScreen('mobilita-servizi'); return false;">
 
-            <div class="service-icon">🚗</div>
+            <div class="service-icon">
+
+				<svg viewBox="0 0 24 24"
+					 fill="none"
+					 stroke="currentColor"
+					 stroke-width="1.8"
+					 stroke-linecap="round"
+					 stroke-linejoin="round">
+
+					<path d="M5 17l1.5-6h11L19 17"/>
+					<path d="M7 17h10"/>
+					<path d="M8 11l1-3h6l1 3"/>
+					<circle cx="8" cy="17" r="1.5"/>
+					<circle cx="16" cy="17" r="1.5"/>
+
+				</svg>
+
+			</div>
 
             <div>
                 <strong>Mobilità</strong>
@@ -1089,7 +1110,23 @@
 		   class="service-item"
 		   onclick="showScreen('cantieri'); return false;">
 
-            <div class="service-icon">CIAO</div>
+            <div class="service-icon">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.8"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+
+                    <path d="M3 20h18"/>
+                    <path d="M6 20v-6l6-10 6 10v6"/>
+                    <path d="M9 20v-4h6v4"/>
+                    <path d="M8 11h8"/>
+
+                </svg>
+
+            </div>
 
             <div>
                 <strong>Lavori e cantieri</strong>
