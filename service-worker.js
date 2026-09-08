@@ -1,4 +1,4 @@
-const CACHE_NAME = "comune-lecco-v2";
+const CACHE_NAME = "comune-lecco-v3";
 
 const FILES_TO_CACHE = [
     "./",
